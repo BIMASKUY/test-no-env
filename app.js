@@ -8,10 +8,11 @@ app.use(express.json())
 const PORT = process.env.PORT
 
 const dbConfig = {
-    user: process.env.DB_USERNAME,
-    password: process.env.DB_PASSWORD,
-    server: process.env.DB_HOST,
-    database: process.env.DB_NAME, 
+    user: process.env.AZURE_SQL_USERNAME,
+    password: process.env.AZURE_SQL_PASSWORD,
+    server: process.env.AZURE_SQL_SERVER,
+    database: process.env.AZURE_SQL_DATABASE,
+    port: parseInt(process.env.AZURE_SQL_PORT),
     options: {
         encrypt: true, 
         trustServerCertificate: true 

@@ -16,8 +16,7 @@ app.post('/:message', (req, res) => {
     })
 })
 
-// const PORT = process.env.PORT
-const PORT = 8080
+const PORT = process.env.PORT
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`)
 })

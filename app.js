@@ -49,7 +49,7 @@ app.post('/register', async (req, res) => {
         await sql.query`INSERT INTO users (username, password) VALUES (${username}, ${password})`
         res.json({
             message: 'Register successful',
-            data: { username, email },
+            data: { username, password },
         })
     } catch (err) {
         res.status(500).json({ message: 'Database error', error: err.message })
